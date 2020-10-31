@@ -46,9 +46,13 @@ algae %>%
 
 sapply(algae,function(x){sum(is.na(x))}) # número de NA´s en la columnas
 round((apply(apply(X = algae,MARGIN = 2,FUN = is.na )
+<<<<<<< Updated upstream:Unidad 1/Clases/C1-6/C1-6 Valores faltantes y atípicos.R
              ,MARGIN=2,FUN=sum)/nrow(algae))*100,2)
 
 
+=======
+             ,MARGIN = 2,FUN = sum)/nrow(algae))*100,2)
+>>>>>>> Stashed changes:Unidad 1/Clases/C1-6/C1-6 Modelo Lineal.R
 # Eliminar las filas
 
 data.cleaning <- algae[!is.na(algae$Chla),]
@@ -58,8 +62,12 @@ data.cleaning2 <- algae[complete.cases(algae),]
 
 ## Imputar por la media
 
+<<<<<<< Updated upstream:Unidad 1/Clases/C1-6/C1-6 Valores faltantes y atípicos.R
 
 mean(algae$Chla,na.rm = T)
+=======
+mean(algae$Chla, na.rm = T)   
+>>>>>>> Stashed changes:Unidad 1/Clases/C1-6/C1-6 Modelo Lineal.R
 algae$Chla_mean <- impute(algae$Chla, mean)
 
 ## Imputar con valor aleatorios
